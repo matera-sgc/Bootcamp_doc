@@ -1,5 +1,6 @@
 package testes.automaticos;
 
+import bootcamp.doc.quinze.testes_automaticos.Conta;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
