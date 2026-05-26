@@ -411,16 +411,6 @@ ContaRecord nova = new ContaRecord(conta.tipoConta(), conta.saldo() + 500, conta
 
 ---
 
-## 🐛 Bug Corrigido
-
-**Arquivo:** `quinze/testes_automaticos/Conta.java`  
-**Problema:** Método `depositar()` tinha `+ 1` indevido na fórmula  
-**Antes:** `this.saldo += valor - taxaOperacao + 1;`  
-**Depois:** `this.saldo += valor - taxaOperacao;`  
-**Impacto:** Teste `testaDeposito()` falhava (esperava 149.5, recebia 150.5)
-
----
-
 ## 📋 Resumo Rápido
 
 ```
