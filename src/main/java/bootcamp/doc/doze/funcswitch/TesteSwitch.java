@@ -1,15 +1,21 @@
 package bootcamp.doc.doze.funcswitch;
 
+/**
+ * Demonstra Switch tradicional vs Switch Expression (Java 14+).
+ * - Switch tradicional: case + break (verboso)
+ * - Switch Expression (->): mais conciso, retorna valor, sem break
+ */
 public class TesteSwitch {
 
     public static void main(String[] args) {
         Conta contaCorrente = new ContaCorrente();
         Conta contaPoupanca = new ContaPoupanca();
 
-        exibeTipoConta(contaCorrente);
-        exibeTipoContaJava17(contaPoupanca);
+        exibeTipoConta(contaCorrente);         // Switch tradicional
+        exibeTipoContaJava17(contaPoupanca);   // Switch Expression
     }
 
+    // Switch TRADICIONAL: requer 'break' para não cair no próximo case
     private static void exibeTipoConta(Conta conta) {
         switch (conta.getTipoConta()){
             case "Conta Corrente":
@@ -27,6 +33,7 @@ public class TesteSwitch {
         }
     }
 
+    // Switch EXPRESSION (Java 14+): usa ->, retorna valor, sem necessidade de break
     private static void exibeTipoContaJava17(Conta conta) {
         String mensagem = switch (conta.getTipoConta()){
             case "Conta Corrente" -> "E uma conta corrente.";

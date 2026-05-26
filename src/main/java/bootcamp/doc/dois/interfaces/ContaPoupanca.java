@@ -1,19 +1,21 @@
 package bootcamp.doc.dois.interfaces;
 
+/**
+ * Implementa a interface Conta com regras de Conta Poupança.
+ * Não possui taxa de operação (valores integrais).
+ */
 public class ContaPoupanca implements Conta {
 
     private Double saldo = 100.00;
 
-
-
     @Override
     public void depositar(Double valor) {
-        this.saldo += valor;
+        this.saldo += valor; // Sem taxa
     }
 
     @Override
     public void sacar(Double valor) {
-        this.saldo -= valor;
+        this.saldo -= valor; // Sem taxa
     }
 
     @Override

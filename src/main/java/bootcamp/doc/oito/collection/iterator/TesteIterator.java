@@ -6,6 +6,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * Demonstra o padrão Iterator para percorrer coleções.
+ * - iterator(): retorna um Iterator para a coleção
+ * - hasNext(): verifica se há próximo elemento
+ * - next(): retorna o próximo elemento
+ * Iterator permite remover elementos durante a iteração (ao contrário do for-each).
+ */
 public class TesteIterator {
 
     public static void main(String[] args) {
@@ -19,6 +26,7 @@ public class TesteIterator {
         Conta conta;
         Iterator<Conta> iteratorConta = contas.iterator();
 
+        // Percorre a lista usando Iterator
         while(iteratorConta.hasNext()) {
             conta = iteratorConta.next();
             System.out.println(conta);

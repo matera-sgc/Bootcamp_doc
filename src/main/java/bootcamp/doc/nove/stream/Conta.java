@@ -1,5 +1,9 @@
 package bootcamp.doc.nove.stream;
 
+/**
+ * Classe modelo usada nos exemplos de Stream.
+ * Representa uma conta bancária com tipo e saldo.
+ */
 public class Conta {
 
     private String tipoConta;

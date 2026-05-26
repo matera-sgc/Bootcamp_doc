@@ -4,6 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * Demonstra ordenação de Map usando TreeMap com Comparator customizado.
+ * - HashMap: sem ordem garantida
+ * - TreeMap: ordena pelas chaves (ou por comparador customizado)
+ * - Aqui ordena pelos VALORES do mapa (nomes das contas)
+ */
 public class TesteMapComparador {
 
     public static void main(String[] args) {
@@ -13,8 +19,10 @@ public class TesteMapComparador {
         mapaContas.put(2, "Conta Poupança");
         mapaContas.put(3, "Conta Comum");
 
+        // Comparador que ordena as chaves baseado nos VALORES
         ComparadorIntsMap comparadorIntsMap = new ComparadorIntsMap(mapaContas);
 
+        // TreeMap aplica o comparador na ordenação
         Map<Integer, String> mapaContasOrdenadas = new TreeMap<>(comparadorIntsMap);
         mapaContasOrdenadas.putAll(mapaContas);
 
